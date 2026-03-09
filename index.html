@@ -59,7 +59,6 @@
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
 
-    /* ===== Fondo: tu imagen + movimiento ===== */
     .bg{
       position:fixed;
       inset:0;
@@ -288,7 +287,7 @@
         <div class="top-cta">
           <div class="pill">Atención <b>24 HS</b> • Carga <b>24/7</b></div>
           <a class="btn" target="_blank" rel="noopener"
-             onclick="fbq('track','Contact');"
+             onclick="fbq('track', 'Contact', {button_location: 'header_whatsapp'});"
              href="https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar%20a%20jugar.">
             WhatsApp →
           </a>
@@ -321,13 +320,13 @@
 
             <div class="actions reveal d4">
               <a class="btn" target="_blank" rel="noopener"
-                 onclick="fbq('track','Contact');"
+                 onclick="fbq('track', 'Contact', {button_location: 'hero_empeza'});"
                  href="https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20el%20acceso%20para%20empezar%20hoy.">
                 EMPEZÁ A JUGAR →
               </a>
 
               <a class="btn secondary" target="_blank" rel="noopener"
-                 onclick="fbq('track','Contact');"
+                 onclick="fbq('track', 'Contact', {button_location: 'hero_referi'});"
                  href="https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20referir%20y%20ganar%20fichas.%20Como%20funciona%3F">
                 REFERI Y GANA FICHAS →
               </a>
@@ -369,11 +368,10 @@
     </div>
   </main>
 
-  <!-- WhatsApp flotante -->
   <div class="wa" aria-label="Contactar por WhatsApp">
     <div class="waLabel">Escribinos por WhatsApp</div>
     <a class="waBtn" target="_blank" rel="noopener"
-       onclick="fbq('track','Contact');"
+       onclick="fbq('track', 'Contact', {button_location: 'floating_whatsapp'});"
        href="https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar.">
       <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path fill="white" d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.44-.14-.63.14-.18.27-.72.88-.88 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.41-2.15-1.32-.79-.7-1.33-1.57-1.48-1.84-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.63-1.52-.86-2.08-.23-.55-.47-.48-.63-.49-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.93 2.95 4.68 4.13.66.28 1.17.45 1.57.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.27.23-.62.23-1.15.16-1.27-.07-.12-.25-.2-.52-.34Z"/>
@@ -383,6 +381,3 @@
   </div>
 </body>
 </html>
-
-
-
