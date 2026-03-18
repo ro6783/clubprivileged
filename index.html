@@ -6,102 +6,113 @@
   <title>CLUB PRIVILEGED</title>
   <meta name="description" content="CLUB PRIVILEGED: Atención 24 hs, carga de fichas 24/7 y respuesta inmediata. Escribinos por WhatsApp." />
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-  s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-  (window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  <!-- ICONOS WHATSAPP -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  fbq('init', '1635046060828411');
-  fbq('track', 'PageView');
+  <!-- META PIXEL -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1635046060828411');
+    fbq('track', 'PageView');
+
+    function abrirWhatsApp(url) {
+      fbq('track', 'Contact'); // evento contacto
+      setTimeout(function () {
+        window.open(url, '_blank');
+      }, 300);
+      return false;
+    }
   </script>
 
   <noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1635046060828411&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1635046060828411&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel Code -->
 
 <style>
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#07060a;
-color:white;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color:white;
 }
 
 .wrap{
-max-width:1100px;
-margin:auto;
-padding:20px;
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
 }
 
 .btn{
-padding:14px 20px;
-border-radius:12px;
-background:#f7c84b;
-color:black;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+  padding:14px 20px;
+  border-radius:12px;
+  background:#f7c84b;
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:10px;
 }
 
 .btn.secondary{
-background:white;
+  background:white;
 }
 
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:40px;
 }
 
 .logoBig{
-max-width:300px;
+  max-width:300px;
 }
 
 .badge{
-background:#111;
-padding:8px 12px;
-border-radius:20px;
-margin-right:10px;
-display:inline-block;
+  background:#111;
+  padding:8px 12px;
+  border-radius:20px;
+  margin-right:10px;
+  display:inline-block;
 }
 
 .waBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:30px;
-text-decoration:none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:32px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
 }
 
 @media(max-width:800px){
-.hero{
-grid-template-columns:1fr;
-}
+  .hero{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 
@@ -114,8 +125,8 @@ grid-template-columns:1fr;
 <header>
 <h2>CLUB PRIVILEGED</h2>
 
-<a class="btn"
-onclick="fbq('track','Lead');setTimeout(function(){window.open('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar%20a%20jugar.','_blank');},300);return false;">
+<a class="btn" href="#"
+onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar%20a%20jugar.');">
 WhatsApp
 </a>
 
@@ -137,31 +148,32 @@ WhatsApp
 
 <br>
 
-<a class="btn"
-onclick="fbq('track','Lead');setTimeout(function(){window.open('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20el%20acceso%20para%20empezar%20hoy.','_blank');},300);return false;">
+<a class="btn" href="#"
+onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20el%20acceso%20para%20empezar%20hoy.');">
 EMPEZÁ A JUGAR
 </a>
 
 <br>
 
-<a class="btn secondary"
-onclick="fbq('track','Lead');setTimeout(function(){window.open('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20referir%20y%20ganar%20fichas.','_blank');},300);return false;">
+<a class="btn secondary" href="#"
+onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20referir%20y%20ganar%20fichas.');">
 REFERÍ Y GANÁ FICHAS
 </a>
 
 </div>
 
 <div style="text-align:center">
-<img class="logoBig" src="clubprivileged.png">
+<img class="logoBig" src="clubprivileged.png" alt="Club Privileged">
 </div>
 
 </section>
 
 </div>
 
-<a class="waBtn"
-onclick="fbq('track','Lead');setTimeout(function(){window.open('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar.','_blank');},300);return false;">
-💬
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a class="waBtn" href="#"
+onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar.');">
+  <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 </body>
