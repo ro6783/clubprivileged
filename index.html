@@ -4,9 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CLUB PRIVILEGED</title>
-  <meta name="description" content="CLUB PRIVILEGED: Atención 24 hs, carga de fichas 24/7 y respuesta inmediata. Escribinos por WhatsApp." />
 
-  <!-- ICONOS WHATSAPP -->
+  <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- META PIXEL -->
@@ -23,18 +22,13 @@
     fbq('track', 'PageView');
 
     function abrirWhatsApp(url) {
-      fbq('track', 'Contact'); // evento contacto
+      fbq('track', 'Contact');
       setTimeout(function () {
         window.open(url, '_blank');
       }, 300);
       return false;
     }
   </script>
-
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1635046060828411&ev=PageView&noscript=1"/>
-  </noscript>
 
 <style>
 body{
@@ -45,21 +39,28 @@ body{
   color:white;
 }
 
+/* CONTENEDOR */
 .wrap{
   max-width:1100px;
   margin:auto;
   padding:20px;
 }
 
+/* HEADER */
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 0;
 }
 
+/* LOGO */
+.logoHeader{
+  max-height:60px;
+}
+
+/* BOTONES */
 .btn{
-  padding:14px 20px;
+  padding:14px 22px;
   border-radius:12px;
   background:#f7c84b;
   color:black;
@@ -67,12 +68,28 @@ header{
   text-decoration:none;
   display:inline-block;
   margin-top:10px;
+  transition:0.3s;
+  animation: pulse 1.5s infinite;
 }
 
+/* BOTON SECUNDARIO */
 .btn.secondary{
   background:white;
 }
 
+/* EFECTO HOVER */
+.btn:hover{
+  transform:scale(1.08);
+}
+
+/* ANIMACION */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
+}
+
+/* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -81,9 +98,10 @@ header{
 }
 
 .logoBig{
-  max-width:300px;
+  max-width:320px;
 }
 
+/* BADGES */
 .badge{
   background:#111;
   padding:8px 12px;
@@ -92,12 +110,13 @@ header{
   display:inline-block;
 }
 
+/* BOTON WHATSAPP FLOTANTE */
 .waBtn{
   position:fixed;
   bottom:20px;
   right:20px;
-  width:60px;
-  height:60px;
+  width:65px;
+  height:65px;
   border-radius:50%;
   background:#25D366;
   display:flex;
@@ -106,7 +125,14 @@ header{
   color:white;
   font-size:32px;
   text-decoration:none;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  box-shadow:0 4px 15px rgba(0,0,0,0.5);
+  animation: bounce 1.2s infinite;
+}
+
+/* ANIMACION WHATSAPP */
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
 }
 
 @media(max-width:800px){
@@ -123,11 +149,13 @@ header{
 <div class="wrap">
 
 <header>
-<h2>CLUB PRIVILEGED</h2>
+
+<!-- LOGO SIN FONDO -->
+<img src="logo.png" class="logoHeader" alt="Club Privileged">
 
 <a class="btn" href="#"
 onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar%20a%20jugar.');">
-WhatsApp
+💬 WhatsApp
 </a>
 
 </header>
@@ -150,27 +178,27 @@ WhatsApp
 
 <a class="btn" href="#"
 onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20el%20acceso%20para%20empezar%20hoy.');">
-EMPEZÁ A JUGAR
+🔥 EMPEZÁ A JUGAR
 </a>
 
 <br>
 
 <a class="btn secondary" href="#"
 onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20referir%20y%20ganar%20fichas.');">
-REFERÍ Y GANÁ FICHAS
+🎁 REFERÍ Y GANÁ
 </a>
 
 </div>
 
 <div style="text-align:center">
-<img class="logoBig" src="clubprivileged.png" alt="Club Privileged">
+<img class="logoBig" src="clubprivileged.png">
 </div>
 
 </section>
 
 </div>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
+<!-- BOTON WHATSAPP -->
 <a class="waBtn" href="#"
 onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar.');">
   <i class="fa-brands fa-whatsapp"></i>
