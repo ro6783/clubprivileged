@@ -23,6 +23,7 @@
 
     function abrirWhatsApp(url) {
       fbq('track', 'Contact');
+      fbq('trackCustom', 'ClickWhatsApp');
       setTimeout(function () {
         window.open(url, '_blank');
       }, 250);
@@ -62,7 +63,7 @@
 
     header{
       display:flex;
-      justify-content:space-between;
+      justify-content:flex-start;
       align-items:center;
       gap:20px;
     }
@@ -83,9 +84,11 @@
       padding:18px 28px;
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       gap:10px;
       box-shadow:0 8px 24px rgba(0,0,0,0.30);
       transition:transform .2s ease, box-shadow .2s ease;
+      animation:pulse 1.8s infinite;
     }
 
     .topBtn:hover{
@@ -141,40 +144,19 @@
 
     .ctaGroup{
       display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:16px;
-    }
-
-    .btn{
-      min-width:290px;
-      padding:20px 28px;
-      border-radius:18px;
-      text-decoration:none;
-      font-size:clamp(20px, 1.4vw, 28px);
-      font-weight:800;
-      display:inline-flex;
-      align-items:center;
       justify-content:center;
-      gap:12px;
-      box-shadow:0 10px 28px rgba(0,0,0,0.28);
-      transition:transform .22s ease, box-shadow .22s ease;
-      animation:pulse 1.8s infinite;
+      align-items:center;
+      width:100%;
+      margin-top:10px;
     }
 
-    .btn:hover{
-      transform:scale(1.04);
-      box-shadow:0 14px 34px rgba(0,0,0,0.35);
-    }
-
-    .btnPrimary{
-      background:#f0c548;
-      color:#111;
-    }
-
-    .btnSecondary{
-      background:#fff;
-      color:#111;
+    .botonCentral{
+      font-size:clamp(24px, 2vw, 34px);
+      padding:22px 40px;
+      border-radius:20px;
+      min-width:320px;
+      min-height:72px;
+      text-align:center;
     }
 
     .right{
@@ -190,33 +172,9 @@
       filter:drop-shadow(0 0 24px rgba(0,0,0,0.6));
     }
 
-    .waFloat{
-      position:fixed;
-      right:24px;
-      bottom:24px;
-      width:72px;
-      height:72px;
-      border-radius:50%;
-      background:#25D366;
-      color:#fff;
-      text-decoration:none;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:38px;
-      box-shadow:0 10px 24px rgba(0,0,0,0.35);
-      animation:bounce 1.4s infinite;
-      z-index:99;
-    }
-
     @keyframes pulse{
       0%,100%{transform:scale(1);}
       50%{transform:scale(1.05);}
-    }
-
-    @keyframes bounce{
-      0%,100%{transform:translateY(0);}
-      50%{transform:translateY(-7px);}
     }
 
     @media (max-width: 980px){
@@ -242,13 +200,13 @@
         width:100%;
       }
 
-      .btn{
+      .topBtn{
         width:100%;
-        min-width:0;
       }
 
-      .topBtn{
-        padding:14px 18px;
+      .botonCentral{
+        width:100%;
+        min-width:0;
       }
 
       .logoHeader{
@@ -262,13 +220,6 @@
   <div class="wrap">
     <header>
       <img src="logo.png" class="logoHeader" alt="Club Privileged">
-
-      <a class="whatsapp-button"
-     href="https://wa.me/5491128339644?text=HolA%20quiero%20jugar%20con%20mi%20bon0%20del%2050%25"  
-     target="_blank"
-     onclick="fbq('trackCustom', 'ClickWhatsApp')">
-    📲 ¡QUIERO MI BONO DEL 50%!
-     </a>
     </header>
 
     <section class="hero">
@@ -286,14 +237,9 @@
         </div>
 
         <div class="ctaGroup">
-          <a class="btn btnPrimary" href="#"
-               onclick="fbq('trackCustom', 'ClickWhatsApp')">('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20el%20acceso%20para%20empezar%20hoy.');">
-            🔥 EMPEZÁ A JUGAR
-          </a>
-
-          <a class="btn btnSecondary" href="#"
-             onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20referir%20y%20ganar%20fichas.');">
-            🎁 REFERÍ Y GANÁ
+          <a class="topBtn botonCentral" href="#"
+             onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20quiero%20jugar%20con%20mi%20bono%20del%2050%25');">
+            JUGA Y GANA
           </a>
         </div>
       </div>
@@ -303,11 +249,6 @@
       </div>
     </section>
   </div>
-
-  <a class="waFloat" href="#"
-     onclick="return abrirWhatsApp('https://wa.me/5491128339644?text=Hola%20CLUB%20PRIVILEGED!%20Quiero%20info%20para%20empezar.');">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
 
 </body>
 </html>
